@@ -1,0 +1,238 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      .fondo {
+        background-image: url(fondooscuro.jpg);
+        background-size: contain;
+        padding-top: 10px;
+      }
+      .fila1 {
+        font-family: "Times New Roman", serif;
+        font-size: 20px;
+        width: 80%;
+        height: 310px;
+        background-color: #ddd;
+        margin: auto;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        border-radius: 7px;
+        opacity:70%;
+      }
+      .reproductor {
+        display:block;
+      }
+      .fila2 {
+        font-family: "Times New Roman", serif;
+        display: flex;
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        border-radius: 7px;
+        border-collapse: separate;
+        border-spacing: 10px, 5px;
+      }
+      .columna1 {
+        font-family: "Times New Roman", serif;
+        width: 50%;
+        height: 500px;
+        background-color: #ddd;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        border-radius: 7px;
+        border-collapse: separate;
+        border-spacing: 10px, 5px;
+        opacity:70%;
+      }
+      .columnamedio {
+        width:10%
+        height:500px;
+        border-collapse: separate;
+        border-spacing: 10px, 5px;
+      }
+      .columna2 {
+        font-family: "Times New Roman", serif;
+        width: 50%;
+        height: 500px;
+        background-color: #ddd;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        border-radius: 7px;
+        border-collapse: separate;
+        border-spacing: 10px, 5px;
+        opacity:70%;
+      }
+      .col2fila1{
+        font-family: "Times New Roman", serif;
+        height:30px;
+      }
+      .col2fila2{
+        font-family: "Times New Roman", serif;
+        height:430px;
+        overflow-y: scroll;
+      }
+      .fila3 {
+        font-family: "Times New Roman", serif;
+        text-indent:5;
+        width: 80%;
+        height: 140px;
+        background-color: #ddd;
+        margin: auto;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        border-radius: 7px;
+        opacity:70%;
+      }
+      .img-container {
+        text-align:center;
+      }
+      .img-container1 {
+        text-align:center;
+        margin: auto;
+      }
+      .textoanimado {
+        display: block;
+        font-family: serif;
+        white-space: nowrap;
+        width: 90ch;
+        animation: escribiendo 10s steps(90);
+        overflow: hidden;
+        animation-iteration-count:infinite;
+      }
+      .cursor{
+        animation: 1.0s parpadeo-cursor infinite;
+      }
+      @keyframes escribiendo {
+        from {
+          width: 0;
+        }
+      }
+      @keyframes parpadeo-cursor {
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fondo">
+      <div class="fila1">
+        <p>
+          <h1><center>CURRICULUM VITAE</center></h1>
+            <div class="img-container">
+              <img src="foto.png" alt="Foto de perfil">
+            </div>
+            <div class="reproductor">
+              <audio preload= "auto" src="musica.mp3" controls="controls"></audio>
+            </div>
+        </p>
+      </div>
+      <br>
+      <div class="fila2">
+        <div class="columna1">
+          <h2><center><u>Datos personales</center></u></h2>
+            <ul>
+              <li><strong>Nombre:</strong> Juan Pérez</li>
+              <li><strong>Documento:</strong> 12345678</li>
+              <li><strong>Fecha de nacimiento:</strong> 15/07/1990</li>
+              <li><strong>Dirección:</strong> <a href= "https://goo.gl/maps/qNPPHre6eYHAMfbQA" target="popup" onclick="window.open(this.href, this.target, 'location=no,width=800,height=600,resizable=yes,scrollbars=yes' ); return false;"> Calle Falsa 123, Ciudad Autónoma de Buenos Aires</a></li>
+              <li><strong>Teléfono:</strong> <a target="_blank" href="https://wa.me/541112345678"> +54 9 11 1234-5678 </a></li>
+              <li><strong>Mail de contacto:</strong> <a href="#" target="_blank" onclick="window.open('contacto.php','ventana','width=640,height=480,scrollbars=NO,menubar=NO,resizable=NO,titlebar=NO,status=NO' ); return false;"> juanperez@mail.com</a></li>
+            </ul>
+            <h2><center><u>Estudios</center></u></h2>
+              <ul>
+                <li>Universidad Nacional de Buenos Aires - Licenciatura en Informática</li>
+                <li>Curso de Desarrollo Web en Acámica</li>
+              </ul>
+        </div>
+        <br>
+        <div class="columnamedio">
+          <ul>
+
+          </ul>
+        </div>
+        <div class="columna2">
+          <div class="col2fila1">
+            <h2><center><u>Experiencia laboral</u></center></h2>
+          </div>
+          <div class="col2fila2">
+            <ul>
+              <li><strong>Empresa:</strong> ACME Inc.</li>
+              <br>
+              <strong>País:</strong> Argentina.
+              <br>
+              <strong>Puesto:</strong> Desarrollador Web.
+              <br>
+              <strong>Periodo:</strong> Octubre 2022 - Actualidad
+              <br>
+              <strong>Descripción:</strong> Desarrollo de aplicaciones web para clientes internos y externos.
+              <br>
+              <strong>Logros:</strong> Implementación de una plataforma de seguimiento de proyectos para el área de desarrollo.
+              <br>
+              <br>
+              <li><strong>Empresa:</strong> XYZ S.A.</li>
+              <br>
+              <strong>País:</strong> España
+              <br>
+              <strong>Puesto:</strong> Analista de Sistemas
+              <br>
+              <strong>Periodo:</strong> Enero 2021 - Septiembre 2022
+              <br>
+              <strong>Descripción:</strong> Análisis de requerimientos y diseño de soluciones tecnológicas para clientes internos y externos.
+              <br>
+              <strong>Logros:</strong> Implementación de un sistema de seguimiento de tareas para el área de soporte técnico.
+              <br>
+              <br>
+              <li><strong>Empresa:</strong> Sarasa Cosmica S.A.</li>
+              <br>
+              <strong>País:</strong> Costa Rica
+              <br>
+              <strong>Puesto:</strong> Ingeniero de Software
+              <br>
+              <strong>Periodo:</strong> Enero 2019 - Diciembre 2020.
+              <br>
+              <strong>Descripción:</strong> Creacion y Revision de codigo fuente y documentacion asociada .
+              <br>
+              <strong>Logros:</strong> Deteccion de fallas de seguridad en modulos de programa principal.
+              <br>
+              <br>
+              <li><strong>Empresa:</strong> Fibercorp S.A.</li>
+              <br>
+              <strong>País:</strong> Argentina
+              <br>
+              <strong>Puesto:</strong> Soporte de Sistemas
+              <br>
+              <strong>Periodo:</strong> Enero 2015 - Diciembre 2018
+              <br>
+              <strong>Descripción:</strong> Creacion y Revision de codigo fuente y documentacion asociada .
+              <br>
+              <strong>Logros:</strong> Deteccion de fallas de seguridad en modulos de programa principal.
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="fila3">
+        <div class="textoanimado">
+          <p>Creado por Pablo Amor como trabajo final para Argentina Programa 4.0. Redes sociales: <span class="cursor">|</span></p>
+        </div>
+        <div class="img-container1">
+            <img style="margin-right: 20px" src="facebook.png" alt="Facebook" onMouseOver="this.width=80;this.height=80;" onMouseOut="this.width=64;this.height=64;" onclick="window.open('https://wwww.facebook.com', '_blank'´)";>
+            <img style="margin-right: 20px" src="instagram.png" alt="Instagram" onMouseOver="this.width=80;this.height=80;" onMouseOut="this.width=64;this.height=64;" onclick="window.open('https://wwww.instagram.com', '_blank'´)";>
+            <img src="twitter.png" alt="Twitter" onMouseOver="this.width=80;this.height=80;" onMouseOut="this.width=64;this.height=64;" onclick="window.open('https://wwww.twitter.com', '_blank'´)";>
+        </div>
+        <br>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>
